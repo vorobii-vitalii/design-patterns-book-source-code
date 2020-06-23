@@ -1,0 +1,105 @@
+Exercise 1: B, D, F
+Exercise 2: Code duplication
+
+
+Design principle:
+
+1. Identify the aspects of your application that vary and separate them from what stays the same.
+
+2. Program to an interface, not an implementation.
+
+3. Favor composition over inheritance
+
+4. Strive for loosely coupled designs between objects that interact.
+
+5. Classes should be open for extension, but closed for modification.
+
+6. Depend upon abstractions. Do not depend upon concrete classes. (Dependency Inversion principle)
+The “inversion” in the name Dependency Inversion Principle is there because it inverts the way you typically might think about your OO design.
+
+7. Principle of Least Knowledge - talk only to your immediate friends.
+
+8. The Hollywood Principle.  Don’t call us, we’ll call you.
+
+9. A class should have only one reason to change
+
+Exercise 3:
+Implement FlyBehavior interface
+Yes, just attach that interface to a class
+
+The Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable.
+Strategy lets the algorithm vary independently from clients that use it.
+
+Exercise 4: A, B,C, D, E
+
+The Observer Pattern defines a one-to-many dependency between objects so that when one object changes state, all of its dependents are notified and updated automatically.
+
+Exercise 5:
+
+1.
+
+The state is distributed across all the observers, which is located in the Subject object.
+That means that we encapsulated the aspect that varies between observers.
+
+2.
+
+We dont know the details of implementation of observers, such that we can interact only with interface method update().
+
+3.
+
+Instead of inheriting from Subject class, its better to put the Observer apart so that we can easily change either of those objects.
+
+
+The Decorator Pattern attaches additional responsibilities to an object dynamically.
+Decorators provide a flexible alternative to subclassing for extending functionality.
+
+A factory method handles object creation and encapsulates it in a subclass.
+This decouples the client code in the superclass from the object creation code in the subclass.
+
+The Factory Method Pattern defines an interface for creating an object, but lets subclasses decide which class to instantiate.
+Factory Method lets a class defer instantiation to subclasses.
+
+The following guidelines can help you avoid OO designs that violate the Dependency Inversion Principle:
+
+1. No variable should hold a reference to a concrete class.
+
+2. No class should derive from a concrete class.
+
+3. No method should override an implemented method of any of its base classes.
+
+
+The Abstract Factory Pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes.
+
+The Singleton Pattern ensures a class has only one instance, and provides a global point of access to it.
+
+The Command Pattern encapsulates a request as an object, thereby letting you parameterize other objects
+with different requests, queue or log requests, and support undoable operations.
+
+The NoCommand object is an example of a null object. A null object is useful when you don’t have a meaningful object to return, and yet you want to remove the responsibility for handling null from the client. For instance, in our remote control we didn’t have a meaningful object to assign to each slot out of the box, so we provided a NoCommand object that acts as a surrogate and does nothing when its execute method is called.
+
+The Adapter Pattern converts the interface of a class into another interface the clients expect.
+Adapter lets classes work together that couldn’t otherwise because of incompatible interfaces.
+
+The Facade Pattern provides a unifi ed interface to a set of interfaces in a subsytem.
+Facade defines a higher-level interface that makes the subsystem easier to use.
+
+
+
+
+The Template Method Pattern defines the skeleton of an algorithm in a method,
+deferring some steps to subclasses.
+Template Method lets subclasses redefine certain steps of an algorithm without
+changing the algorithm’s structure.
+
+The Iterator Pattern provides a way to access the elements of an aggregate object
+sequentially without exposing its underlying representation.
+
+Cohesion is  a term you'll hear used as a measure of how closely a class or a module
+supports a single purpose or responsibility
+
+The Composite Pattern allows you to compose objects into tree structures
+to represent part-whole hierarchies. Composite lets clients treat individual
+objects and compositins of objects uniformly.
+
+The Proxy Pattern provides a surrogate or placeholder for another object
+to control access to it.
